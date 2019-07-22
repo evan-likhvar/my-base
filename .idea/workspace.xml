@@ -2,15 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="067cd0f5-cafd-46b3-ae9f-25ddd87aa875" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Events/MessageToPresenceChanelEvent.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Events/MessageToPresenceChanelEvent.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Events/MessageToPrivateChanelEvent.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Events/MessageToPrivateChanelEvent.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Broadcast/BroadcastController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Broadcast/BroadcastController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/broadcast.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/broadcast.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/broadcast/broadcast.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/broadcast/broadcast.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/my-base/broadcast/layout.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/my-base/broadcast/layout.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/channels.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/channels.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -26,14 +23,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="225">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Broadcast/BroadcastController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="672">
-              <caret line="48" lean-forward="true" selection-start-line="48" selection-end-line="48" />
+            <state relative-caret-position="686">
+              <caret line="49" selection-start-line="49" selection-end-line="49" />
               <folding>
-                <element signature="e#50#93#0#PHP" expanded="true" />
+                <element signature="e#50#94#0#PHP" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Events/MessageToPresenceChanelEvent.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="154">
+              <caret line="18" column="22" selection-start-line="18" selection-start-column="11" selection-end-line="18" selection-end-column="28" />
             </state>
           </provider>
         </entry>
@@ -42,7 +48,7 @@
         <entry file="file://$PROJECT_DIR$/app/Events/MessageToPrivateChanelEvent.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="504">
-              <caret line="36" selection-start-line="36" selection-end-line="36" />
+              <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
               <folding>
                 <element signature="e#30#66#0#PHP" expanded="true" />
               </folding>
@@ -54,7 +60,7 @@
         <entry file="file://$PROJECT_DIR$/routes/web.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="490">
-              <caret line="35" column="97" selection-start-line="35" selection-start-column="91" selection-end-line="35" selection-end-column="120" />
+              <caret line="35" column="46" selection-start-line="35" selection-start-column="42" selection-end-line="35" selection-end-column="50" />
               <folding>
                 <element signature="e#7#43#0#PHP" expanded="true" />
               </folding>
@@ -65,17 +71,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/my-base/broadcast/layout.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="358">
-              <caret line="46" column="86" selection-start-line="46" selection-start-column="80" selection-end-line="46" selection-end-column="88" />
+            <state relative-caret-position="652">
+              <caret line="67" column="35" selection-start-line="67" selection-start-column="35" selection-end-line="67" selection-end-column="35" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/js/broadcast/broadcast.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="792">
-              <caret line="88" column="57" lean-forward="true" selection-start-line="88" selection-start-column="57" selection-end-line="88" selection-end-column="57" />
+            <state relative-caret-position="516">
+              <caret line="97" column="50" lean-forward="true" selection-start-line="97" selection-start-column="50" selection-end-line="97" selection-end-column="50" />
             </state>
           </provider>
         </entry>
@@ -84,7 +90,7 @@
         <entry file="file://$PROJECT_DIR$/routes/channels.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="252">
-              <caret line="27" column="3" lean-forward="true" selection-start-line="27" selection-start-column="3" selection-end-line="27" selection-end-column="3" />
+              <caret line="27" column="3" selection-start-line="27" selection-start-column="3" selection-end-line="27" selection-end-column="3" />
             </state>
           </provider>
         </entry>
@@ -114,7 +120,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Unrestricted/PublicController.php" />
         <option value="$PROJECT_DIR$/app/Models/ModelLocales/Category.php" />
         <option value="$PROJECT_DIR$/app/Models/ModelLocales/CategoryLocale.php" />
         <option value="$PROJECT_DIR$/app/Models/Category.php" />
@@ -158,13 +163,14 @@
         <option value="$PROJECT_DIR$/app/Events/MessageToPublicChanelEvent.php" />
         <option value="$PROJECT_DIR$/.env" />
         <option value="$PROJECT_DIR$/storage/logs/laravel-2019-07-22.log" />
-        <option value="$PROJECT_DIR$/app/Events/MessageToPrivateChanelEvent.php" />
         <option value="$PROJECT_DIR$/database/migrations/2019_07_22_093922_add_ws_token_to_users.php" />
         <option value="$PROJECT_DIR$/routes/channels.php" />
-        <option value="$PROJECT_DIR$/resources/views/my-base/broadcast/layout.blade.php" />
-        <option value="$PROJECT_DIR$/resources/js/broadcast/broadcast.js" />
         <option value="$PROJECT_DIR$/routes/web.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Broadcast/BroadcastController.php" />
+        <option value="$PROJECT_DIR$/resources/views/my-base/broadcast/layout.blade.php" />
+        <option value="$PROJECT_DIR$/app/Events/MessageToPresenceChanelEvent.php" />
+        <option value="$PROJECT_DIR$/app/Events/MessageToPrivateChanelEvent.php" />
+        <option value="$PROJECT_DIR$/resources/js/broadcast/broadcast.js" />
       </list>
     </option>
   </component>
@@ -462,22 +468,23 @@
       <workItem from="1563518003438" duration="603000" />
       <workItem from="1563524512505" duration="6315000" />
       <workItem from="1563539837996" duration="4357000" />
-      <workItem from="1563774654348" duration="13203000" />
+      <workItem from="1563774654348" duration="18630000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="387776000" />
+    <option name="totallyTimeSpent" value="393203000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="3889" y="-2" width="1871" height="1082" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="npm" order="0" sideWeight="0.3665628" side_tool="true" weight="0.32586113" />
       <window_info id="Favorites" order="1" side_tool="true" />
       <window_info id="Structure" order="2" sideWeight="0.91069573" side_tool="true" weight="0.34117004" />
-      <window_info id="Terminal" order="3" sideWeight="0.65212876" weight="0.26079825" />
+      <window_info id="Terminal" order="3" sideWeight="0.65212876" weight="0.32640788" />
       <window_info id="Run" order="4" sideWeight="0.6500519" weight="0.40951338" />
-      <window_info active="true" content_ui="combo" id="Project" order="5" sideWeight="0.63343716" visible="true" weight="0.32586113" />
+      <window_info active="true" content_ui="combo" id="Project" order="5" sideWeight="0.63343716" visible="true" weight="0.23127392" />
       <window_info id="Debug" order="6" sideWeight="0.47352025" side_tool="true" weight="0.3794423" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32924336" />
@@ -559,13 +566,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/Http/Middleware/Authenticate.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Middleware/SetLocale.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="308">
@@ -863,16 +863,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Events/MessageToPrivateChanelEvent.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="36" selection-start-line="36" selection-end-line="36" />
-          <folding>
-            <element signature="e#30#66#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/database/migrations/2019_07_22_093922_add_ws_token_to_users.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="448">
@@ -880,44 +870,61 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/channels.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="27" column="3" lean-forward="true" selection-start-line="27" selection-start-column="3" selection-end-line="27" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/js/broadcast/broadcast.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="792">
-          <caret line="88" column="57" lean-forward="true" selection-start-line="88" selection-start-column="57" selection-end-line="88" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/my-base/broadcast/layout.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="358">
-          <caret line="46" column="86" selection-start-line="46" selection-start-column="80" selection-end-line="46" selection-end-column="88" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/routes/web.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="490">
-          <caret line="35" column="97" selection-start-line="35" selection-start-column="91" selection-end-line="35" selection-end-column="120" />
+          <caret line="35" column="46" selection-start-line="35" selection-start-column="42" selection-end-line="35" selection-end-column="50" />
           <folding>
             <element signature="e#7#43#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/my-base/broadcast/layout.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="652">
+          <caret line="67" column="35" selection-start-line="67" selection-start-column="35" selection-end-line="67" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/channels.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="27" column="3" selection-start-line="27" selection-start-column="3" selection-end-line="27" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Broadcast/BroadcastController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="672">
-          <caret line="48" lean-forward="true" selection-start-line="48" selection-end-line="48" />
+        <state relative-caret-position="686">
+          <caret line="49" selection-start-line="49" selection-end-line="49" />
           <folding>
-            <element signature="e#50#93#0#PHP" expanded="true" />
+            <element signature="e#50#94#0#PHP" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Events/MessageToPrivateChanelEvent.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
+          <folding>
+            <element signature="e#30#66#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Events/MessageToPresenceChanelEvent.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="18" column="22" selection-start-line="18" selection-start-column="11" selection-end-line="18" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/js/broadcast/broadcast.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="516">
+          <caret line="97" column="50" lean-forward="true" selection-start-line="97" selection-start-column="50" selection-end-line="97" selection-end-column="50" />
         </state>
       </provider>
     </entry>

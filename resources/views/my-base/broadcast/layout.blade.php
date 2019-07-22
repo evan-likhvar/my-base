@@ -57,7 +57,17 @@
                 </div>
                 <div class="uk-card uk-card-default uk-card-body uk-width-1-1@m">
                     <h3 class="uk-card-title">Presence chanel</h3>
-                    <div id="presence_chanel_data"></div>
+                    <div>
+                        <ul id="presence_chanel_data" class="uk-list uk-list-striped">
+
+                        </ul>
+                    </div>
+                    <div class="uk-card-footer">
+                        On line<br>
+                        <div id="chat_users">
+                            <a href="#" class="uk-button uk-button-text">Read more</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

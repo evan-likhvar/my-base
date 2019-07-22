@@ -16,11 +16,16 @@ class MessageToPresenceChanelEvent implements ShouldBroadcast
     use Dispatchable, InteractsWithSockets, SerializesModels;
 
 
-    public $publicMessages;
+    public $presenceMessages;
+    /**
+     * @var string
+     */
+    public $userName;
 
-    public function __construct(string $publicMessages)
+    public function __construct(string $presenceMessages, string $userName)
     {
-        $this->publicMessages = $publicMessages;
+        $this->presenceMessages = $presenceMessages;
+        $this->userName = $userName;
     }
 
     /**
@@ -30,7 +35,6 @@ class MessageToPresenceChanelEvent implements ShouldBroadcast
      */
     public function broadcastOn()
     {
-        $user = Auth::user();
-        return new Channel('private-private-chanel.'.$user->ws_token);
+        return new Channel('presence-chat.1');
     }
 }

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Broadcast;
 
+use App\Events\MessageToPresenceChanelEvent;
 use App\Events\MessageToPrivateChanelEvent;
 use App\Events\MessageToPublicChanelEvent;
 use Illuminate\Http\Request;
@@ -31,7 +32,7 @@ class BroadcastController extends Controller
 
     public function pushSomethingToPresenceChanel(Request $request)
     {
-        event(new MessageToPresenceChanelEvent('Presence chanel '.Str::random(10)));
+        event(new MessageToPresenceChanelEvent('Presence chanel '.Str::random(10), Auth::user()->name));
         return response()->json(['pushSomethingToPresenceChanel']);
     }
 

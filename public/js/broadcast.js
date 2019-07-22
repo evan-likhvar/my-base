@@ -12097,16 +12097,44 @@ axios.post('/broadcast/set-connection').then(function (res) {
   window.Echo["private"]('private-chanel.' + res.data).listen('MessageToPrivateChanelEvent', function (data) {
     console.log(data);
     var el = document.createElement("p");
-    el.innerText = 'privateMessages: ' + data.publicMessages;
+    el.innerText = 'privateMessages: ' + data.privateMessages;
     document.getElementById('private_chanel_data').prepend(el);
   });
-}); // connect to public chanel
+}); // connect to Presence chanel
 
-window.Echo.channel('public-chanel').listen('MessageToPublicChanelEvent', function (data) {
-  console.log(data.publicMessages);
-  var el = document.createElement("p");
-  el.innerText = 'publicMessages: ' + data.publicMessages;
-  document.getElementById('public_chanel_data').prepend(el);
+var chatUsers;
+
+function drawUsers() {
+  console.log('draw user');
+  console.log(chatUsers);
+  var usersList = '';
+  chatUsers.forEach(function (chatUser) {
+    usersList = usersList + "<a href=\"#\" class=\"uk-button uk-button-text\">".concat(chatUser.name, "</a>;   ");
+  });
+  document.getElementById('chat_users').innerHTML = usersList;
+}
+
+window.Echo.join("chat.1").here(function (users) {
+  console.log('Users in chat: ' + JSON.stringify(users));
+  chatUsers = users;
+  drawUsers();
+}).joining(function (user) {
+  chatUsers.push(user);
+  console.log(chatUsers);
+  drawUsers();
+}).leaving(function (user) {
+  console.log('Leaving user: ' + user.name);
+  var i = chatUsers.findIndex(function (chatUser) {
+    return chatUser.name === user.name;
+  });
+  chatUsers.splice(i, 1);
+  console.log('Users in chat: ' + JSON.stringify(chatUsers));
+  drawUsers();
+}).listen('MessageToPresenceChanelEvent', function (data) {
+  console.log(data);
+  var el = document.createElement("li");
+  el.innerHTML = "<strong>".concat(data.userName, "</strong> say: ").concat(data.presenceMessages);
+  document.getElementById('presence_chanel_data').prepend(el);
 });
 var button1 = document.getElementById('axios-post1');
 var button2 = document.getElementById('axios-post2');
@@ -12131,8 +12159,8 @@ function sendAxiosPost2() {
 function sendAxiosPost3() {
   var profile = {};
   profile['someData'] = 'some data';
-  axios.post('/broadcast/push-something-to-private-chanel', profile).then(function (res) {
-    console.log('axios-post2  ' + res.data);
+  axios.post('/broadcast/push-something-to-presence-chanel', profile).then(function (res) {
+    console.log('axios-post3  ' + res.data);
   });
 }
 

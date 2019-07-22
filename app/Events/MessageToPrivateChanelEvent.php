@@ -16,11 +16,11 @@ class MessageToPrivateChanelEvent implements ShouldBroadcast
     use Dispatchable, InteractsWithSockets, SerializesModels;
 
 
-    public $publicMessages;
+    public $privateMessages;
 
-    public function __construct(string $publicMessages)
+    public function __construct(string $privateMessages)
     {
-        $this->publicMessages = $publicMessages;
+        $this->privateMessages = $privateMessages;
     }
 
     /**
