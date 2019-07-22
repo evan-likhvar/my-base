@@ -12083,7 +12083,25 @@ window.Echo = new laravel_echo__WEBPACK_IMPORTED_MODULE_0__["default"]({
   cluster: 'eu',
   encrypted: true
 });
-console.log('load echo and pusher');
+console.log('loaded echo and pusher'); // connect to public chanel
+
+window.Echo.channel('public-chanel').listen('MessageToPublicChanelEvent', function (data) {
+  console.log(data.publicMessages);
+  var el = document.createElement("p");
+  el.innerText = 'publicMessages: ' + data.publicMessages;
+  document.getElementById('public_chanel_data').prepend(el);
+}); // connect to private chanel
+
+axios.post('/broadcast/set-connection').then(function (res) {
+  console.log('set-connection  ' + res.data);
+  window.Echo["private"]('private-chanel.' + res.data).listen('MessageToPrivateChanelEvent', function (data) {
+    console.log(data);
+    var el = document.createElement("p");
+    el.innerText = 'privateMessages: ' + data.publicMessages;
+    document.getElementById('private_chanel_data').prepend(el);
+  });
+}); // connect to public chanel
+
 window.Echo.channel('public-chanel').listen('MessageToPublicChanelEvent', function (data) {
   console.log(data.publicMessages);
   var el = document.createElement("p");
@@ -12091,6 +12109,8 @@ window.Echo.channel('public-chanel').listen('MessageToPublicChanelEvent', functi
   document.getElementById('public_chanel_data').prepend(el);
 });
 var button1 = document.getElementById('axios-post1');
+var button2 = document.getElementById('axios-post2');
+var button3 = document.getElementById('axios-post3');
 
 function sendAxiosPost() {
   var profile = {};
@@ -12100,7 +12120,25 @@ function sendAxiosPost() {
   });
 }
 
+function sendAxiosPost2() {
+  var profile = {};
+  profile['someData'] = 'some data';
+  axios.post('/broadcast/push-something-to-private-chanel', profile).then(function (res) {
+    console.log('axios-post2  ' + res.data);
+  });
+}
+
+function sendAxiosPost3() {
+  var profile = {};
+  profile['someData'] = 'some data';
+  axios.post('/broadcast/push-something-to-private-chanel', profile).then(function (res) {
+    console.log('axios-post2  ' + res.data);
+  });
+}
+
 button1.addEventListener('click', sendAxiosPost, false);
+button2.addEventListener('click', sendAxiosPost2, false);
+button3.addEventListener('click', sendAxiosPost3, false);
 
 /***/ }),
 

@@ -40,28 +40,24 @@
 
 <div class="uk-section">
     <div class="uk-container">
-
         <div uk-grid>
             <div class="uk-width-auto@m">
                 <input id="axios-post1" type="button" value="Push something to 'Public chanel'"><br>
-                <input id="axios-post2" type="button" value="Axios Post"><br>
-                <input id="axios-post3" type="button" value="Axios Post"><br>
-                <input id="axios-post4" type="button" value="Axios Post"><br>
-                <input id="axios-post5" type="button" value="Axios Post"><br>
-                <input id="axios-post6" type="button" value="Axios Post">
+                <input id="axios-post2" type="button" value="Push something to 'Private chanel'"><br>
+                <input id="axios-post3" type="button" value="Push something to 'Presence chanel"><br>
             </div>
             <div class="uk-width-expand@m">
                 <div class="uk-card uk-card-default uk-card-body uk-width-1-1@m">
                     <h3 class="uk-card-title">Public chanel</h3>
-                    <div id="public_chanel_data">
-
-                    </div>
+                    <div id="public_chanel_data"></div>
                 </div>
                 <div class="uk-card uk-card-default uk-card-body uk-width-1-1@m">
                     <h3 class="uk-card-title">Private chanel</h3>
-                    <div id="public_chanel_data">
-
-                    </div>
+                    <div id="private_chanel_data"></div>
+                </div>
+                <div class="uk-card uk-card-default uk-card-body uk-width-1-1@m">
+                    <h3 class="uk-card-title">Presence chanel</h3>
+                    <div id="presence_chanel_data"></div>
                 </div>
             </div>
         </div>

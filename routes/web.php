@@ -32,6 +32,9 @@ Broadcast::routes();
 
 Route::get('/broadcast', 'Broadcast\BroadcastController@index')->name('broadcast');
 Route::post('/broadcast/push-something-to-public-chanel', 'Broadcast\BroadcastController@pushSomethingToPublicChanel');
+Route::post('/broadcast/push-something-to-private-chanel', 'Broadcast\BroadcastController@pushSomethingToPrivateChanel');
+Route::post('/broadcast/push-something-to-presence-chanel', 'Broadcast\BroadcastController@pushSomethingToPresenceChanel');
+Route::post('/broadcast/set-connection', 'Broadcast\BroadcastController@getWSToken');
 
 /****************/
 

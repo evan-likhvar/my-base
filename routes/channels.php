@@ -17,6 +17,12 @@
 
 use Illuminate\Support\Facades\Broadcast;
 
-Broadcast::channel('private-chanel.{orderId}', function ($user, $orderId) {
-    return $user->id === $orderId;
+Broadcast::channel('private-chanel.{wsToken}', function ($user, $wsToken) {
+    return $user->ws_token == $wsToken;
+});
+
+Broadcast::channel('chat.{roomId}', function ($user, $roomId) {
+    if ($user->ws_chat == $roomId) {
+        return ['name' => $user->name];
+    }
 });
