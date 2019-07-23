@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Route;
 Auth::routes(['verify' => true]);
 
 Route::get('/home', function () {
-    return view(config('settings.theme-views-personal-area').'.index.index');
+    return view(config('site-settings.theme-views-personal-area').'.index.index');
 })->middleware('auth')->name('home');
 
 

@@ -45,6 +45,7 @@
                 <input id="axios-post1" type="button" value="Push something to 'Public chanel'"><br>
                 <input id="axios-post2" type="button" value="Push something to 'Private chanel'"><br>
                 <input id="axios-post3" type="button" value="Push something to 'Presence chanel"><br>
+                <input id="axios-post4" type="button" value="Push notification"><br>
             </div>
             <div class="uk-width-expand@m">
                 <div class="uk-card uk-card-default uk-card-body uk-width-1-1@m">

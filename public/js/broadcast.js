@@ -12076,26 +12076,21 @@ if (token) {
   console.error('CSRF token not found.');
 }
 
-console.log('broadcast page start');
 window.Echo = new laravel_echo__WEBPACK_IMPORTED_MODULE_0__["default"]({
   broadcaster: 'pusher',
   key: 'e92f54d4a4b930cd3585',
   cluster: 'eu',
   encrypted: true
-});
-console.log('loaded echo and pusher'); // connect to public chanel
+}); // connect to public chanel
 
 window.Echo.channel('public-chanel').listen('MessageToPublicChanelEvent', function (data) {
-  console.log(data.publicMessages);
   var el = document.createElement("p");
   el.innerText = 'publicMessages: ' + data.publicMessages;
   document.getElementById('public_chanel_data').prepend(el);
 }); // connect to private chanel
 
 axios.post('/broadcast/set-connection').then(function (res) {
-  console.log('set-connection  ' + res.data);
   window.Echo["private"]('private-chanel.' + res.data).listen('MessageToPrivateChanelEvent', function (data) {
-    console.log(data);
     var el = document.createElement("p");
     el.innerText = 'privateMessages: ' + data.privateMessages;
     document.getElementById('private_chanel_data').prepend(el);
@@ -12105,8 +12100,6 @@ axios.post('/broadcast/set-connection').then(function (res) {
 var chatUsers;
 
 function drawUsers() {
-  console.log('draw user');
-  console.log(chatUsers);
   var usersList = '';
   chatUsers.forEach(function (chatUser) {
     usersList = usersList + "<a href=\"#\" class=\"uk-button uk-button-text\">".concat(chatUser.name, "</a>;   ");
@@ -12115,58 +12108,80 @@ function drawUsers() {
 }
 
 window.Echo.join("chat.1").here(function (users) {
-  console.log('Users in chat: ' + JSON.stringify(users));
   chatUsers = users;
   drawUsers();
 }).joining(function (user) {
   chatUsers.push(user);
-  console.log(chatUsers);
   drawUsers();
 }).leaving(function (user) {
-  console.log('Leaving user: ' + user.name);
   var i = chatUsers.findIndex(function (chatUser) {
     return chatUser.name === user.name;
   });
   chatUsers.splice(i, 1);
-  console.log('Users in chat: ' + JSON.stringify(chatUsers));
   drawUsers();
 }).listen('MessageToPresenceChanelEvent', function (data) {
-  console.log(data);
   var el = document.createElement("li");
   el.innerHTML = "<strong>".concat(data.userName, "</strong> say: ").concat(data.presenceMessages);
   document.getElementById('presence_chanel_data').prepend(el);
 });
-var button1 = document.getElementById('axios-post1');
-var button2 = document.getElementById('axios-post2');
-var button3 = document.getElementById('axios-post3');
+/*
+const button1 = document.getElementById('axios-post1');
+const button2 = document.getElementById('axios-post2');
+const button3 = document.getElementById('axios-post3');
+
 
 function sendAxiosPost() {
-  var profile = {};
-  profile['someData'] = 'some data';
-  axios.post('/broadcast/push-something-to-public-chanel', profile).then(function (res) {
-    console.log('axios-post1  ' + res.data);
-  });
+    const profile = {};
+    profile['someData'] = 'some data';
+
+    axios.post('/broadcast/push-something-to-public-chanel', profile)
+        .then(res => {
+            console.log('axios-post1  '+res.data);
+        })
 }
 
 function sendAxiosPost2() {
-  var profile = {};
-  profile['someData'] = 'some data';
-  axios.post('/broadcast/push-something-to-private-chanel', profile).then(function (res) {
-    console.log('axios-post2  ' + res.data);
-  });
+    const profile = {};
+    profile['someData'] = 'some data';
+
+    axios.post('/broadcast/push-something-to-private-chanel', profile)
+        .then(res => {
+            console.log('axios-post2  '+res.data);
+        })
 }
 
 function sendAxiosPost3() {
-  var profile = {};
-  profile['someData'] = 'some data';
-  axios.post('/broadcast/push-something-to-presence-chanel', profile).then(function (res) {
-    console.log('axios-post3  ' + res.data);
-  });
+    const profile = {};
+    profile['someData'] = 'some data';
+
+    axios.post('/broadcast/push-something-to-presence-chanel', profile)
+        .then(res => {
+            console.log('axios-post3  '+res.data);
+        })
 }
 
 button1.addEventListener('click', sendAxiosPost, false);
 button2.addEventListener('click', sendAxiosPost2, false);
 button3.addEventListener('click', sendAxiosPost3, false);
+
+// function pushNotification()
+// {
+//     chatRoom
+//         .whisper('typing', {
+//             name: 'aetyeyrur'
+//         });
+// }
+*/
+
+document.getElementById('axios-post1').addEventListener('click', function () {
+  axios.post('/broadcast/push-something-to-public-chanel');
+}, false);
+document.getElementById('axios-post2').addEventListener('click', function () {
+  axios.post('/broadcast/push-something-to-private-chanel');
+}, false);
+document.getElementById('axios-post3').addEventListener('click', function () {
+  axios.post('/broadcast/push-something-to-presence-chanel');
+}, false); //document.getElementById('axios-post4').addEventListener('click', pushNotification, false);
 
 /***/ }),
 

@@ -10,20 +10,17 @@ if (token) {
     console.error('CSRF token not found.');
 }
 
-console.log('broadcast page start');
 window.Echo = new Echo({
     broadcaster: 'pusher',
     key: 'e92f54d4a4b930cd3585',
     cluster: 'eu',
     encrypted: true
 });
-console.log('loaded echo and pusher');
 
 // connect to public chanel
 window.Echo.channel('public-chanel')
     .listen('MessageToPublicChanelEvent', (data) => {
-        console.log(data.publicMessages);
-        const el =  document.createElement("p");
+        let el = document.createElement("p");
         el.innerText = 'publicMessages: '+data.publicMessages;
         document.getElementById('public_chanel_data').prepend(el);
     });
@@ -31,11 +28,9 @@ window.Echo.channel('public-chanel')
 // connect to private chanel
 axios.post('/broadcast/set-connection')
     .then(res => {
-        console.log('set-connection  '+res.data);
         window.Echo.private('private-chanel.'+res.data)
             .listen('MessageToPrivateChanelEvent', (data) => {
-                console.log(data);
-                const el =  document.createElement("p");
+                let el = document.createElement("p");
                 el.innerText = 'privateMessages: '+data.privateMessages;
                 document.getElementById('private_chanel_data').prepend(el);
             });
@@ -44,8 +39,6 @@ axios.post('/broadcast/set-connection')
 // connect to Presence chanel
 let chatUsers;
 function drawUsers(){
-    console.log('draw user');
-    console.log(chatUsers);
     let usersList = '';
     chatUsers.forEach((chatUser)=>{
         usersList = usersList+`<a href="#" class="uk-button uk-button-text">${chatUser.name}</a>;   `;
@@ -55,35 +48,30 @@ function drawUsers(){
 
 window.Echo.join(`chat.1`)
     .here((users) => {
-        console.log('Users in chat: '+JSON.stringify(users));
         chatUsers = users;
         drawUsers()
     })
     .joining((user) => {
         chatUsers.push(user);
-        console.log(chatUsers);
         drawUsers()
     })
     .leaving((user) => {
-        console.log('Leaving user: '+user.name);
         let i = chatUsers.findIndex((chatUser)=>{
             return chatUser.name === user.name
         });
         chatUsers.splice(i,1);
-        console.log('Users in chat: '+JSON.stringify(chatUsers));
         drawUsers()
     })
     .listen('MessageToPresenceChanelEvent', (data) => {
-        console.log(data);
         const el =  document.createElement("li");
         el.innerHTML = `<strong>${data.userName}</strong> say: ${data.presenceMessages}`;
         document.getElementById('presence_chanel_data').prepend(el);
     });
-
-
+/*
 const button1 = document.getElementById('axios-post1');
 const button2 = document.getElementById('axios-post2');
 const button3 = document.getElementById('axios-post3');
+
 
 function sendAxiosPost() {
     const profile = {};
@@ -118,4 +106,17 @@ function sendAxiosPost3() {
 button1.addEventListener('click', sendAxiosPost, false);
 button2.addEventListener('click', sendAxiosPost2, false);
 button3.addEventListener('click', sendAxiosPost3, false);
+
+// function pushNotification()
+// {
+//     chatRoom
+//         .whisper('typing', {
+//             name: 'aetyeyrur'
+//         });
+// }
+*/
+document.getElementById('axios-post1').addEventListener('click', ()=>{axios.post('/broadcast/push-something-to-public-chanel')}, false);
+document.getElementById('axios-post2').addEventListener('click', ()=>{axios.post('/broadcast/push-something-to-private-chanel')}, false);
+document.getElementById('axios-post3').addEventListener('click', ()=>{axios.post('/broadcast/push-something-to-presence-chanel')}, false);
+//document.getElementById('axios-post4').addEventListener('click', pushNotification, false);
 

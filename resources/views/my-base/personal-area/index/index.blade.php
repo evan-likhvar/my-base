@@ -1,4 +1,4 @@
-@extends(config('settings.theme-views-personal-area').'.layout')
+@extends(config('site-settings.theme-views-personal-area').'.layout')
 @section('content')
     <div class="uk-inline uk-width-1-1" uk-height-viewport="expand: true">
         <div class="uk-position-center uk-overlay uk-overlay-default">
