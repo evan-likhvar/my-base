@@ -36,8 +36,16 @@ Route::post('/broadcast/push-something-to-private-chanel', 'Broadcast\BroadcastC
 Route::post('/broadcast/push-something-to-presence-chanel', 'Broadcast\BroadcastController@pushSomethingToPresenceChanel');
 Route::post('/broadcast/set-connection', 'Broadcast\BroadcastController@getWSToken');
 
-/****************/
 
+/****************/
+Route::get('/broadcast-redis', 'Broadcast\BroadcastRedisController@index')->name('broadcast-redis');
+Route::post('/broadcast-redis/push-something-to-public-chanel', 'Broadcast\BroadcastRedisController@pushSomethingToPublicChanel');
+Route::post('/broadcast-redis/push-something-to-private-chanel', 'Broadcast\BroadcastRedisController@pushSomethingToPrivateChanel');
+Route::post('/broadcast-redis/push-something-to-presence-chanel', 'Broadcast\BroadcastRedisController@pushSomethingToPresenceChanel');
+Route::post('/broadcast-redis/set-connection', 'Broadcast\BroadcastRedisController@getWSToken');
+
+
+/****************/
 Route::get('/token', 'Token\TokenController@index')->name('token');
 Route::post('/token/post-form', 'Token\TokenController@post')->name('token-post');
 Route::post('/token/post-form-json', 'Token\TokenController@postJson')->name('token-post-json');

@@ -9,6 +9,7 @@ use Illuminate\Broadcasting\PresenceChannel;
 use Illuminate\Foundation\Events\Dispatchable;
 use Illuminate\Broadcasting\InteractsWithSockets;
 use Illuminate\Contracts\Broadcasting\ShouldBroadcast;
+use Illuminate\Support\Facades\Redis;
 
 class MessageToPublicChanelEvent implements ShouldBroadcast
 {
@@ -29,6 +30,13 @@ class MessageToPublicChanelEvent implements ShouldBroadcast
      */
     public function broadcastOn()
     {
+        Redis::set('name', '12121212');
+
         return new Channel('public-chanel');
+    }
+
+    public function broadcastWith()
+    {
+        return ['publicMessages' => $this->publicMessages];
     }
 }

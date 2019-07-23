@@ -11,11 +11,12 @@ const mix = require('laravel-mix');
  |
  */
 
-mix.js('resources/js/app.js', 'public/js')
-    .scripts(['public/js/app.js','resources/js/front-customizer.js'],'public/js/all.js')
-    .sass('resources/sass/app.scss', 'public/css');
-
-
-mix.js('resources/js/broadcast/broadcast.js', 'public/js');
-
-mix.js('resources/js/token/token.js', 'public/js');
+// mix.js('resources/js/app.js', 'public/js')
+//     .scripts(['public/js/app.js','resources/js/front-customizer.js'],'public/js/all.js')
+//     .sass('resources/sass/app.scss', 'public/css');
+//
+//
+// mix.js('resources/js/broadcast/broadcast.js', 'public/js');
+mix.js('resources/js/broadcast/broadcast-redis.js', 'public/js');
+//
+// mix.js('resources/js/token/token.js', 'public/js');

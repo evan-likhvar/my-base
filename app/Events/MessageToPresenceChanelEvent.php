@@ -35,6 +35,6 @@ class MessageToPresenceChanelEvent implements ShouldBroadcast
      */
     public function broadcastOn()
     {
-        return new Channel('presence-chat.1');
+        return new PresenceChannel('chat.1');
     }
 }
