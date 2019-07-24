@@ -27,7 +27,6 @@ class BroadcastRedisController extends Controller
         //Redis::publish('test-channel', json_encode(['foo' => 'bar']));
 
 
-
         event(new MessageToPublicChanelEvent('Public chanel '.Str::random(10)));
         return response()->json(['pushSomethingToPublicChanel-redis']);
     }

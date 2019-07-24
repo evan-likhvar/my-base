@@ -1,7 +1,8 @@
 window.axios = require('axios');
 window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 import Echo from "laravel-echo";
-window.Pusher = require('pusher-js');
+window.io = require('socket.io-client');
+//console.error(window.io);
 
 let token = document.head.querySelector('meta[name="csrf-token"]');
 if (token) {
@@ -11,10 +12,8 @@ if (token) {
 }
 
 window.Echo = new Echo({
-    broadcaster: 'pusher',
-    key: 'e92f54d4a4b930cd3585',
-    cluster: 'eu',
-    encrypted: true
+    broadcaster: 'socket.io',
+    host: 'http://my-base' + ':60001'
 });
 
 // connect to public chanel

@@ -2,22 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="067cd0f5-cafd-46b3-ae9f-25ddd87aa875" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Broadcast/BroadcastRedisController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/broadcast/broadcast-redis.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/my-base/broadcast/layout2.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/my-base.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/my-base.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Events/MessageToPresenceChanelEvent.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Events/MessageToPresenceChanelEvent.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Events/MessageToPrivateChanelEvent.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Events/MessageToPrivateChanelEvent.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Events/MessageToPublicChanelEvent.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Events/MessageToPublicChanelEvent.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/database.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/database.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/mix-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/mix-manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/my-base/includes/main-menu-links/main-menu-links.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/my-base/includes/main-menu-links/main-menu-links.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webpack.mix.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.mix.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Broadcast/BroadcastRedisController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Broadcast/BroadcastRedisController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/broadcast-redis.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/broadcast-redis.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/broadcast/broadcast-redis.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/broadcast/broadcast-redis.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -32,87 +22,7 @@
     </execution>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="225">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/js/broadcast/broadcast-redis.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="806">
-              <caret line="72" column="98" selection-start-line="72" selection-start-column="98" selection-end-line="72" selection-end-column="98" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Broadcast/BroadcastRedisController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="266">
-              <caret line="26" column="10" selection-start-line="26" selection-start-column="10" selection-end-line="26" selection-end-column="10" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Events/MessageToPublicChanelEvent.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="34" column="37" selection-start-line="34" selection-start-column="28" selection-end-line="34" selection-end-column="41" />
-              <folding>
-                <element signature="e#30#66#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/Console/Commands/RedisSubscribe.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="490">
-              <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
-              <folding>
-                <element signature="e#40#71#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/database.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1884">
-              <caret line="139" column="51" selection-start-line="139" selection-start-column="51" selection-end-line="139" selection-end-column="51" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.env">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="616">
-              <caret line="44" selection-start-line="44" selection-end-line="44" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/cache.php">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/broadcasting.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="560">
-              <caret line="40" column="14" selection-start-line="40" selection-start-column="14" selection-end-line="40" selection-end-column="14" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/storage/logs/laravel-2019-07-23.log">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="225" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -137,8 +47,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/database/migrations/2019_06_21_074552_create_notes_table.php" />
-        <option value="$PROJECT_DIR$/database/migrations/2019_06_21_074553_create_z_notes_table.php" />
         <option value="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" />
         <option value="$PROJECT_DIR$/app/Models/ModelLocales/NoteLocale.php" />
         <option value="$PROJECT_DIR$/database/factories/CategoryRUFactory.php" />
@@ -177,17 +85,19 @@
         <option value="$PROJECT_DIR$/resources/js/broadcast/broadcast.js" />
         <option value="$PROJECT_DIR$/app/Events/MessageToPrivateChanelEvent.php" />
         <option value="$PROJECT_DIR$/app/Events/MessageToPresenceChanelEvent.php" />
-        <option value="$PROJECT_DIR$/.env" />
         <option value="$PROJECT_DIR$/resources/views/my-base/includes/main-menu-links/main-menu-links.blade.php" />
         <option value="$PROJECT_DIR$/routes/web.php" />
         <option value="$PROJECT_DIR$/webpack.mix.js" />
         <option value="$PROJECT_DIR$/resources/views/my-base/broadcast/layout2.blade.php" />
-        <option value="$PROJECT_DIR$/resources/js/broadcast/broadcast-redis.js" />
         <option value="$PROJECT_DIR$/storage/logs/laravel-2019-07-23.log" />
         <option value="$PROJECT_DIR$/config/database.php" />
         <option value="$PROJECT_DIR$/app/Events/MessageToPublicChanelEvent.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Broadcast/BroadcastRedisController.php" />
         <option value="$PROJECT_DIR$/app/Console/Commands/RedisSubscribe.php" />
+        <option value="$PROJECT_DIR$/server.js" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Broadcast/BroadcastRedisController.php" />
+        <option value="$PROJECT_DIR$/.env" />
+        <option value="$PROJECT_DIR$/laravel-echo-server.json" />
+        <option value="$PROJECT_DIR$/resources/js/broadcast/broadcast-redis.js" />
       </list>
     </option>
   </component>
@@ -300,7 +210,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -311,43 +220,7 @@
             <path>
               <item name="my-base" type="b2602c69:ProjectViewProjectNode" />
               <item name="my-base" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="my-base" type="b2602c69:ProjectViewProjectNode" />
-              <item name="my-base" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Console" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="my-base" type="b2602c69:ProjectViewProjectNode" />
-              <item name="my-base" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Console" type="462c0819:PsiDirectoryNode" />
-              <item name="Commands" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="my-base" type="b2602c69:ProjectViewProjectNode" />
-              <item name="my-base" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="my-base" type="b2602c69:ProjectViewProjectNode" />
-              <item name="my-base" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="my-base" type="b2602c69:ProjectViewProjectNode" />
-              <item name="my-base" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="my-base" type="b2602c69:ProjectViewProjectNode" />
-              <item name="my-base" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-              <item name="broadcast" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="my-base" type="b2602c69:ProjectViewProjectNode" />
@@ -364,6 +237,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -371,24 +245,24 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="SearchEverywhereHistoryKey" value="frouser&#9;FILE&#9;file:///var/www/html/woo/resources/views/woo/frontend/contents/front-user-dashboard.blade.php&#10;sett&#9;FILE&#9;file:///var/www/html/woo/config/settings.php&#10;back&#9;FILE&#9;file:///var/www/html/woo/routes/backend.php&#10;BLC&#9;FILE&#9;file:///var/www/html/woo/app/Http/Controllers/Back/BackLanguageController.php&#10;langua&#9;null&#9;null&#10;userse&#9;null&#9;null&#10;setti&#9;FILE&#9;file:///var/www/html/woo/config/settings.php" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/js/broadcast" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="web-ide.project.structure" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public" />
+      <recent name="$PROJECT_DIR$/resources/js/broadcast" />
+      <recent name="$PROJECT_DIR$/resources/views/my-base/broadcast" />
+      <recent name="$PROJECT_DIR$/app/Http/Controllers/Broadcast" />
+      <recent name="$PROJECT_DIR$/app/Events" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/resources/views/my-base/token" />
       <recent name="$PROJECT_DIR$/resources/views/my-base/broadcast" />
       <recent name="$PROJECT_DIR$/packages/elikh/set-locale-middleware/src" />
       <recent name="$PROJECT_DIR$/app/Http/Controllers/Unrestricted" />
       <recent name="$PROJECT_DIR$/resources/views/my-base/personal-area" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/resources/js/broadcast" />
-      <recent name="$PROJECT_DIR$/resources/views/my-base/broadcast" />
-      <recent name="$PROJECT_DIR$/app/Http/Controllers/Broadcast" />
-      <recent name="$PROJECT_DIR$/app/Events" />
-      <recent name="$PROJECT_DIR$/app/Http/Controllers/Token" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -506,23 +380,23 @@
       <workItem from="1563524512505" duration="6315000" />
       <workItem from="1563539837996" duration="4357000" />
       <workItem from="1563774654348" duration="23011000" />
-      <workItem from="1563862296246" duration="9742000" />
+      <workItem from="1563862296246" duration="10408000" />
+      <workItem from="1563948926074" duration="7871000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="407326000" />
+    <option name="totallyTimeSpent" value="415863000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="3889" y="-2" width="1871" height="1082" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info id="npm" order="0" sideWeight="0.3520249" side_tool="true" weight="0.40951338" />
+      <window_info id="npm" order="0" sideWeight="0.36448598" side_tool="true" visible="true" weight="0.3652269" />
       <window_info id="Favorites" order="1" side_tool="true" />
       <window_info id="Structure" order="2" sideWeight="0.91069573" side_tool="true" weight="0.34117004" />
-      <window_info active="true" id="Terminal" order="3" sideWeight="0.63655245" visible="true" weight="0.3652269" />
-      <window_info id="Run" order="4" sideWeight="0.6479751" weight="0.26079825" />
-      <window_info content_ui="combo" id="Project" order="5" sideWeight="0.6323987" weight="0.3056315" />
+      <window_info active="true" id="Terminal" order="3" sideWeight="0.635514" visible="true" weight="0.3652269" />
+      <window_info id="Run" order="4" sideWeight="0.6448598" weight="0.26079825" />
+      <window_info content_ui="combo" id="Project" order="5" sideWeight="0.6396677" weight="0.3056315" />
       <window_info id="Debug" order="6" sideWeight="0.47352025" side_tool="true" weight="0.3794423" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32924336" />
@@ -604,37 +478,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/packages/elikh/set-locale-middleware/src/SetLocaleServiceProvider.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="434">
-          <caret line="31" selection-start-line="31" selection-end-line="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/packages/elikh/set-locale-middleware/src/site-locales.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="56">
-          <caret line="4" column="26" selection-start-line="4" selection-start-column="26" selection-end-line="4" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/packages/elikh/set-locale-middleware/src/SetLocaleMiddleware.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="27" column="54" selection-start-line="27" selection-start-column="54" selection-end-line="27" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Models/Note.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="35" column="5" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="5" />
-          <folding>
-            <element signature="e#30#56#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Traits/TranslatableModelTrait.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="518">
@@ -815,13 +658,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/js/broadcast/broadcast.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="742">
-          <caret line="53" column="24" selection-start-line="53" selection-start-column="24" selection-end-line="53" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Events/MessageToPrivateChanelEvent.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="504">
@@ -876,47 +712,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/js/broadcast/broadcast-redis.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="806">
-          <caret line="72" column="98" selection-start-line="72" selection-start-column="98" selection-end-line="72" selection-end-column="98" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/storage/logs/laravel-2019-07-23.log">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/cache.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.env">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="616">
-          <caret line="44" selection-start-line="44" selection-end-line="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/broadcasting.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="560">
-          <caret line="40" column="14" selection-start-line="40" selection-start-column="14" selection-end-line="40" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/database.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1884">
-          <caret line="139" column="51" selection-start-line="139" selection-start-column="51" selection-end-line="139" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Broadcast/BroadcastRedisController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="26" column="10" selection-start-line="26" selection-start-column="10" selection-end-line="26" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Events/MessageToPublicChanelEvent.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="476">
@@ -927,13 +722,85 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/storage/logs/laravel-2019-07-23.log">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/cache.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/database.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="890">
+          <caret line="139" column="51" selection-start-line="139" selection-start-column="51" selection-end-line="139" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/Console/Commands/RedisSubscribe.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="490">
-          <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
+        <state relative-caret-position="420">
+          <caret line="30" column="29" selection-start-line="30" selection-start-column="27" selection-end-line="30" selection-end-column="40" />
           <folding>
             <element signature="e#40#71#0#PHP" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/broadcasting.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="24" column="76" lean-forward="true" selection-start-line="24" selection-start-column="76" selection-end-line="24" selection-end-column="76" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/js/broadcast/broadcast.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="742">
+          <caret line="53" column="24" selection-start-line="53" selection-start-column="24" selection-end-line="53" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/socket.io.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/storage/logs/laravel-2019-07-24.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="364">
+          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Broadcast/BroadcastRedisController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="28" selection-start-line="28" selection-end-line="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.env">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="616">
+          <caret line="44" lean-forward="true" selection-start-line="44" selection-end-line="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel-echo-server.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="18" column="14" lean-forward="true" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/js/broadcast/broadcast-redis.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="596">
+          <caret line="56" column="24" lean-forward="true" selection-start-line="56" selection-start-column="24" selection-end-line="56" selection-end-column="24" />
         </state>
       </provider>
     </entry>
