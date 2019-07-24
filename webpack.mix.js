@@ -16,7 +16,7 @@ const mix = require('laravel-mix');
 //     .sass('resources/sass/app.scss', 'public/css');
 //
 //
-// mix.js('resources/js/broadcast/broadcast.js', 'public/js');
+ mix.js('resources/js/broadcast/broadcast.js', 'public/js');
 mix.js('resources/js/broadcast/broadcast-redis.js', 'public/js');
 //
 // mix.js('resources/js/token/token.js', 'public/js');

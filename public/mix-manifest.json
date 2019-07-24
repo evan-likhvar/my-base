@@ -1,3 +1,4 @@
 {
+    "/js/broadcast.js": "/js/broadcast.js",
     "/js/broadcast-redis.js": "/js/broadcast-redis.js"
 }

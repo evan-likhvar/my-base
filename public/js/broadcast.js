@@ -81,7 +81,7 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 1);
+/******/ 	return __webpack_require__(__webpack_require__.s = 0);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -12080,7 +12080,12 @@ window.Echo = new laravel_echo__WEBPACK_IMPORTED_MODULE_0__["default"]({
   broadcaster: 'pusher',
   key: 'e92f54d4a4b930cd3585',
   cluster: 'eu',
-  encrypted: true
+  encrypted: true // auth: {
+  //     headers: {
+  //         Authorization: 'Bearer ' + token,
+  //     },
+  // },
+
 }); // connect to public chanel
 
 window.Echo.channel('public-chanel').listen('MessageToPublicChanelEvent', function (data) {
@@ -12090,7 +12095,7 @@ window.Echo.channel('public-chanel').listen('MessageToPublicChanelEvent', functi
 }); // connect to private chanel
 
 axios.post('/broadcast/set-connection').then(function (res) {
-  window.Echo["private"]('private-chanel.' + res.data).listen('MessageToPrivateChanelEvent', function (data) {
+  window.Echo["private"]('private_chanel.' + res.data).listen('MessageToPrivateChanelEvent', function (data) {
     var el = document.createElement("p");
     el.innerText = 'privateMessages: ' + data.privateMessages;
     document.getElementById('private_chanel_data').prepend(el);
@@ -12185,7 +12190,7 @@ document.getElementById('axios-post3').addEventListener('click', function () {
 
 /***/ }),
 
-/***/ 1:
+/***/ 0:
 /*!***************************************************!*\
   !*** multi ./resources/js/broadcast/broadcast.js ***!
   \***************************************************/

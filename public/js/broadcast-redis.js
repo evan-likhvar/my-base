@@ -81,7 +81,7 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 0);
+/******/ 	return __webpack_require__(__webpack_require__.s = 1);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -6483,7 +6483,7 @@ if (typeof WebSocket !== 'undefined') {
   BrowserWebSocket = self.WebSocket || self.MozWebSocket;
 } else {
   try {
-    NodeWebSocket = __webpack_require__(/*! ws */ 1);
+    NodeWebSocket = __webpack_require__(/*! ws */ 2);
   } catch (e) { }
 }
 
@@ -12243,7 +12243,7 @@ window.Echo.channel('public-chanel').listen('MessageToPublicChanelEvent', functi
 }); // connect to private chanel
 
 axios.post('/broadcast/set-connection').then(function (res) {
-  window.Echo["private"]('private-chanel.' + res.data).listen('MessageToPrivateChanelEvent', function (data) {
+  window.Echo["private"]('private_chanel.' + res.data).listen('MessageToPrivateChanelEvent', function (data) {
     var el = document.createElement("p");
     el.innerText = 'privateMessages: ' + data.privateMessages;
     document.getElementById('private_chanel_data').prepend(el);
@@ -12289,7 +12289,7 @@ document.getElementById('axios-post3').addEventListener('click', function () {
 
 /***/ }),
 
-/***/ 0:
+/***/ 1:
 /*!*********************************************************!*\
   !*** multi ./resources/js/broadcast/broadcast-redis.js ***!
   \*********************************************************/
@@ -12301,7 +12301,7 @@ module.exports = __webpack_require__(/*! /var/www/html/my-base/resources/js/broa
 
 /***/ }),
 
-/***/ 1:
+/***/ 2:
 /*!********************!*\
   !*** ws (ignored) ***!
   \********************/

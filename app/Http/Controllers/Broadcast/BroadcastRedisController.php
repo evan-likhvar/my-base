@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Broadcast;
 use App\Events\MessageToPresenceChanelEvent;
 use App\Events\MessageToPrivateChanelEvent;
 use App\Events\MessageToPublicChanelEvent;
+use Illuminate\Broadcasting\BroadcastManager;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
@@ -19,26 +20,34 @@ class BroadcastRedisController extends Controller
     }
 
 
-    public function pushSomethingToPublicChanel(Request $request)
+    public function pushSomethingToPublicChanel(Request $request,BroadcastManager $broadcastManager)
     {
 
-        //dd('pushSomethingToPublicChanel');
 
-        //Redis::publish('test-channel', json_encode(['foo' => 'bar']));
+        $broadcastManager->setDefaultDriver('redis');
+        $broadcastManager->connection('redis');
 
+        //dd($broadcastManager->getDefaultDriver(),$broadcastManager->connection());
 
         event(new MessageToPublicChanelEvent('Public chanel '.Str::random(10)));
         return response()->json(['pushSomethingToPublicChanel-redis']);
     }
 
-    public function pushSomethingToPrivateChanel(Request $request)
+    public function pushSomethingToPrivateChanel(Request $request,BroadcastManager $broadcastManager)
     {
+
+        $broadcastManager->setDefaultDriver('redis');
+        $broadcastManager->connection('redis');
+
         event(new MessageToPrivateChanelEvent('Private chanel '.Str::random(10)));
         return response()->json(['pushSomethingToPrivateChanel']);
     }
 
-    public function pushSomethingToPresenceChanel(Request $request)
+    public function pushSomethingToPresenceChanel(Request $request,BroadcastManager $broadcastManager)
     {
+        $broadcastManager->setDefaultDriver('redis');
+        $broadcastManager->connection('redis');
+
         event(new MessageToPresenceChanelEvent('Presence chanel '.Str::random(10), Auth::user()->name));
         return response()->json(['pushSomethingToPresenceChanel']);
     }

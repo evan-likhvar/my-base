@@ -31,6 +31,6 @@ class MessageToPrivateChanelEvent implements ShouldBroadcast
     public function broadcastOn()
     {
         $user = Auth::user();
-        return new PrivateChannel('private-chanel.'.$user->ws_token);
+        return new PrivateChannel('private_chanel.'.$user->ws_token);
     }
 }

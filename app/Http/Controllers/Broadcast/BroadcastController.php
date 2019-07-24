@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Broadcast;
 use App\Events\MessageToPresenceChanelEvent;
 use App\Events\MessageToPrivateChanelEvent;
 use App\Events\MessageToPublicChanelEvent;
+use Illuminate\Broadcasting\BroadcastManager;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
@@ -18,20 +19,29 @@ class BroadcastController extends Controller
     }
 
 
-    public function pushSomethingToPublicChanel(Request $request)
+    public function pushSomethingToPublicChanel(Request $request,BroadcastManager $broadcastManager)
     {
+        $broadcastManager->setDefaultDriver('pusher');
+        $broadcastManager->connection('pusher');
+
         event(new MessageToPublicChanelEvent('Public chanel '.Str::random(10)));
         return response()->json(['pushSomethingToPublicChanel']);
     }
 
-    public function pushSomethingToPrivateChanel(Request $request)
+    public function pushSomethingToPrivateChanel(Request $request,BroadcastManager $broadcastManager)
     {
+        $broadcastManager->setDefaultDriver('pusher');
+        $broadcastManager->connection('pusher');
+
         event(new MessageToPrivateChanelEvent('Private chanel '.Str::random(10)));
         return response()->json(['pushSomethingToPrivateChanel']);
     }
 
-    public function pushSomethingToPresenceChanel(Request $request)
+    public function pushSomethingToPresenceChanel(Request $request,BroadcastManager $broadcastManager)
     {
+        $broadcastManager->setDefaultDriver('pusher');
+        $broadcastManager->connection('pusher');
+
         event(new MessageToPresenceChanelEvent('Presence chanel '.Str::random(10), Auth::user()->name));
         return response()->json(['pushSomethingToPresenceChanel']);
     }

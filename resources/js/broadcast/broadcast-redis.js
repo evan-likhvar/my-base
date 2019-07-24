@@ -27,7 +27,7 @@ window.Echo.channel('public-chanel')
 // connect to private chanel
 axios.post('/broadcast/set-connection')
     .then(res => {
-        window.Echo.private('private-chanel.'+res.data)
+        window.Echo.private('private_chanel.'+res.data)
             .listen('MessageToPrivateChanelEvent', (data) => {
                 let el = document.createElement("p");
                 el.innerText = 'privateMessages: '+data.privateMessages;

@@ -17,7 +17,7 @@
 
 use Illuminate\Support\Facades\Broadcast;
 
-Broadcast::channel('private-chanel.{wsToken}', function ($user, $wsToken) {
+Broadcast::channel('private_chanel.{wsToken}', function ($user, $wsToken) {
     return $user->ws_token == $wsToken;
 });
 

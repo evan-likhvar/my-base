@@ -30,8 +30,6 @@ class MessageToPublicChanelEvent implements ShouldBroadcast
      */
     public function broadcastOn()
     {
-        Redis::set('name', '12121212');
-
         return new Channel('public-chanel');
     }
 
